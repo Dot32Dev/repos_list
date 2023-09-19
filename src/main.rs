@@ -20,12 +20,17 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Total stars
     let mut total_stars = 0;
 
+    // Hidden repos
+    let mut hidden_repos = repos.len();
+
     // Print repos
     for repo in repos.iter().filter(|&repo| repo.stargazers_count > 0) {
         println!("{} Stars: {}", repo.stargazers_count, repo.name);
         total_stars += repo.stargazers_count;
+        hidden_repos -= 1;
     }
 
     println!("Total Stars: {}", total_stars);
+    println!("There are {} repos with 0 stars", hidden_repos);
     Ok(())
 }
