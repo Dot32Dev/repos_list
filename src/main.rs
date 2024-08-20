@@ -6,7 +6,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // Get repos from github api
     let res = reqwest::blocking::Client::new()
-        .get("https://api.github.com/users/Dot32IsCool/repos?per_page=100")
+        .get("https://api.github.com/users/Dot32Dev/repos?per_page=100")
         .header("User-Agent", "repo_list") // Required by github api
         .send()?;
         

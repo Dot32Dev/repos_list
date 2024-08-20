@@ -10,7 +10,7 @@ pub struct Repo {
     // pub private: bool,
     // pub owner: HashMap<String, String>,
     // pub html_url: String,
-    pub description: Option<String>,
+    // pub description: Option<String>,
     // pub fork: bool,
     // pub url: String,
     // pub forks_url: String,
